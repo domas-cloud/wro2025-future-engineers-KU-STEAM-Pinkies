@@ -15,4 +15,4 @@ To build a reliable and fully autonomous rover capable of navigating real-world 
 
 ## 🎯 Project Goal
 
-> To create an autonomous, environment-aware rover that can move and make decisions independently, efficiently avoiding obstacles in real time.
+ To create an autonomous, environment-aware rover that can move and make decisions independently, efficiently avoiding obstacles in real time.
