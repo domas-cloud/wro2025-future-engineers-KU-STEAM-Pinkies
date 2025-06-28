@@ -29,6 +29,20 @@ By combining our individual strengths, responsibilities, and teamwork, we were a
  To create an autonomous, environment-aware robot that can move and make decisions independently, efficiently avoiding obstacles in real time.
  
 ## Ideas and Principles
+This was one of the most complex projects we’ve worked on. We followed several guiding rules and ideas that helped us make decisions quickly and efficiently. 
+Core Principles: 
+•	Reliability over speed – better to be a bit slower, but always working 
+•	Simplicity is key – avoid overly complex solutions 
+•	Iterative improvement – enhance step by step 
+•	Testing over theory – everything is tested in practice 
+•	Mistakes = data – failure means learning something new 
+Effective Ideas: 
+•	Switched from ultrasonic to TOF for more stable side detection 
+•	Used PID control for smooth turning 
+•	3D printed mounts for fast design changes 
+•	Kept code structured: sensor reading, decision-making, and action execution separated 
+•	Built the frame from plywood for strength without excess weight 
+•	Tested under real conditions – recreated the map at home for accuracy 
 
 ## Robot Movement Control
 
