@@ -12,7 +12,7 @@
 
 
 WRO Future Engineers documentation 
-Team Name: KU STEAM TP-40 
+Team Name: KU STEAM Pinkies
 Project Title:   
 ## Team Introduction
 We are **KU STEAM Pinkies**, a passionate group of young engineers with a shared vision:  
