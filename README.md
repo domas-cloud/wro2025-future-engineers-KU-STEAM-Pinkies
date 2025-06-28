@@ -1,6 +1,7 @@
 # 🤖   - WRO 2025 Future Engineers: KU STEAM Pinkies
 ## 📚 Table of Contents
 - [Team Introduction](#team-introduction)
+- [Ideas and Principles](#ideas-and-principles)
 - [Robot Movement Control](#robot-movement-control)
 - [Power and Sensor Management](#power-and-sensor-management)
 - [Obstacle Avoidance](#obstacle-avoidance)
@@ -8,7 +9,7 @@
 - [Robot Construction](#robot-construction)
 - [Robot Control Architecture](#robot-control-architecture)
 - [Electronics Wiring Diagram](#electronics-wiring-diagram)
-- [Ideas and Principles](#ideas-and-principles)
+
 
 WRO Future Engineers documentation 
 Team Name: KU STEAM TP-40 
@@ -27,6 +28,8 @@ By combining our individual strengths, responsibilities, and teamwork, we were a
 **Our Goal:** 
  To create an autonomous, environment-aware robot that can move and make decisions independently, efficiently avoiding obstacles in real time.
  
+## Ideas and Principles
+
 ## Robot Movement Control
 
 ## Power and Sensor Management
@@ -41,7 +44,6 @@ By combining our individual strengths, responsibilities, and teamwork, we were a
 
 ## Electronics Wiring Diagram
 
-## Ideas and Principles
 
 
 
