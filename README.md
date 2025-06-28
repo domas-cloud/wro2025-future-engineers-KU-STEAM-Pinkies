@@ -36,7 +36,7 @@ This was one of the most complex projects we’ve worked on. We followed several
 - Iterative improvement – enhance step by step 
 -	Testing over theory – everything is tested in practice 
 -	Mistakes = data – failure means learning something new
--	 
+   
 **Effective Ideas:** 
 -	Switched from ultrasonic to TOF for more stable side detection 
 -	Used PID control for smooth turning 
