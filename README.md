@@ -46,7 +46,6 @@ This was one of the most complex projects we’ve worked on. We followed several
 -	Tested under real conditions – recreated the map at home for accuracy 
 
 ## Robot Movement Control
-# Robot Steering and Wall-Following Control System
 
 The robot moves using a **single-motor drive** powering the rear wheels. The **direction is controlled** using a **gear and rack mechanism** that adjusts the angle of the front axle wheels. A **servo motor**, controlled via a **PWM signal**, allows precise steering adjustments.
 
