@@ -46,6 +46,25 @@ This was one of the most complex projects we’ve worked on. We followed several
 -	Tested under real conditions – recreated the map at home for accuracy 
 
 ## Robot Movement Control
+The robot moves using a single-motor drive powering the rear wheels. The direction is controlled using a gear and rack mechanism that adjusts the angle of the front axle wheels. A servo motor, controlled via a PWM signal, allows precise steering adjustments. 
+To ensure stable movement parallel to a wall, two TOF (Time-of-Flight) sensors are mounted on the same side: 
+•	x₁ – front (beam AA₁) 
+•	x₂ – rear (beam BB₁) 
+Important: Beams AA₁ and BB₁ are parallel because both TOF sensors are mounted parallel to each other, perpendicular to the robot's chassis. This allows precise estimation of: 
+•	Whether the robot is angled relative to the wall (Δx) Control is based on two differences: 
+•	Δx = x₂ − x₁ (angular tilt) 
+•	Δd = d₁ − d₂ (distance difference from the wall) 
+Δx is used to correct the angle – if the front distance is smaller than the rear (or vice versa), the robot isn't parallel to the wall. The system adjusts the front axle angle until Δx ≈ 0. 
+To avoid sudden and uncontrolled turns that could cause instability, the turning angle of the front axle is adjusted gradually using a simple PID (Proportional–Integral–Derivative) control algorithm. 
+PID logic ensures that: 
+•	Reactions to errors (Δx or Δd) are proportional to their size 
+•	No sudden jumps – angle changes gradually depending on the rate of change 
+•	Long-term deviations are corrected smoothly, even if sensor data briefly fluctuates 
+As a result, the robot moves smoothly, without overloading the steering mechanism or jumping between trajectories. 
+This control allows the robot to: 
+•	Maintain a smooth, straight trajectory 
+•	Avoid colliding with walls 
+•	Move safely even in narrow paths 
 
 ## Power and Sensor Management
 
