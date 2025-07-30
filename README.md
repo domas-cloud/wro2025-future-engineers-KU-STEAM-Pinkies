@@ -65,6 +65,7 @@ This control allows the robot to:
 •	Maintain a smooth, straight trajectory 
 •	Avoid colliding with walls 
 •	Move safely even in narrow paths 
+<img width="600" height="616" alt="image" src="https://github.com/user-attachments/assets/b2d9ebfe-193c-45cf-9ac2-bdeeccee2a55" />
 
 ## Power and Sensor Management
 
