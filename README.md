@@ -19,9 +19,9 @@ We are **KU STEAM Pinkies**, a passionate group of young engineers with a shared
 To build a reliable and fully autonomous robot capable of navigating real-world environments.
 
 **Team Members & Roles:**
-- **Marius** – Programmer
-- **Domas** – Electronics Specialist
-- **Jonas** – Mechanical Designer
+- **Marius** – Programmer and Mechanical Designer
+- **Domas** – Marketing and Testing
+- **Jonas** – Electronics Specialist and Design
   
 By combining our individual strengths, responsibilities, and teamwork, we were able to design, build, and refine a reliable autonomous car ready for competition. 
 
