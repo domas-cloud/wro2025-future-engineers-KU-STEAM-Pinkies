@@ -102,9 +102,9 @@ The robot’s control system follows a **Sensor–Controller–Actuator (SCA)** 
 ## 2. Data Processing Layer
 - Sensor readings are processed to create a **track model**.  
 - Three key parameters are calculated:  
-  -**Wall angle** relative to the robot.  
-  -**Distance to the wall**.  
- - **Corridor width**.  
+  **Wall angle** relative to the robot.  
+  **Distance to the wall**.  
+  **Corridor width**.  
 - These parameters define the robot’s position inside the corridor.
 
 ## 3. Control Layer
