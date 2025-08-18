@@ -90,7 +90,45 @@ To avoid **sudden and uncontrolled turns**, the turning angle of the front axle 
 
 ## Robot Construction
 
-## Robot Control Architecture
+# Robot Control Architecture
+
+The robot’s control system follows a **Sensor–Controller–Actuator (SCA)** architecture with a continuous feedback loop. The system is divided into several functional layers:
+
+## 1. Sensor Layer
+- **5× VL53L1X ToF distance sensors** are used to measure distances at the front, sides, and rear.  
+- Each sensor is connected via I²C and assigned a unique address.  
+- Raw measurements are calibrated (error compensation) to account for mounting offsets.
+
+## 2. Data Processing Layer
+- Sensor readings are processed to create a **track model**.  
+- Three key parameters are calculated:  
+  1. **Wall angle** relative to the robot.  
+  2. **Distance to the wall**.  
+  3. **Corridor width**.  
+- These parameters define the robot’s position inside the corridor.
+
+## 3. Control Layer
+- A **PD controller** is used for steering.  
+- **Input:** the error between the robot’s current position and the center of the track.  
+- **Output:** the steering angle for the servo motor.  
+- Proportional (P) control reacts to the size of the error, while Derivative (D) control reduces oscillations.
+
+## 4. Decision Logic
+- Additional logic ensures safe navigation:  
+  - If an obstacle is detected in front → the robot moves briefly backward.  
+  - If the corridor opens more on the left/right side → the robot chooses the freer path.  
+  - If sensors are not ready → the robot does not start.
+
+## 5. Actuator Layer
+- **DC motor** controls forward and backward movement. The speed is limited to maintain stability.  
+- **Servo motor** adjusts the steering angle according to the PD controller output.
+
+## 6. Feedback Loop
+- The system operates as a closed loop:  
+  - Sensors continuously update measurements.  
+  - The controller calculates the new error.  
+  - The PD controller generates a new steering angle.  
+  - The robot’s motion is re-evaluated with fresh sensor data. 
 
 ## Electronics Wiring Diagram
 
