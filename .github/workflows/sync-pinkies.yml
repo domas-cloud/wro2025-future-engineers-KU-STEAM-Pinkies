@@ -3,7 +3,9 @@ name: Sync pinkies -> src
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/30 * * * *"  
+  repository_dispatch:
+    types: [pinkies-updated]  
 
 permissions:
   contents: write
@@ -34,13 +36,10 @@ jobs:
           PINKIES_BRANCH: main
         run: |
           if [ ! -d "src" ] || [ -z "$(ls -A src 2>/dev/null)" ]; then
-            echo "src/ tuščias – darau subtree ADD"
             git subtree add --prefix=src pinkies "$PINKIES_BRANCH" --squash
           else
-            echo "src/ egzistuoja – darau subtree PULL"
             git subtree pull --prefix=src pinkies "$PINKIES_BRANCH" --squash
           fi
 
       - name: Push changes (if any)
-        run: |
-          git push
+        run: git push
