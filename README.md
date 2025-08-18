@@ -67,7 +67,6 @@ This setup allows precise estimation of:
 The control is based on two differences:
 
 - `Δx = x₂ − x₁` → **Angular tilt**
-- `Δd = d₁ − d₂` → **Distance difference from the wall**
 
 - `Δx` is used to **correct the angle** – if the front distance is smaller than the rear (or vice versa), the robot isn't parallel to the wall.
 - The system adjusts the **front axle angle** until `Δx ≈ 0`.
@@ -78,7 +77,7 @@ To avoid **sudden and uncontrolled turns**, the turning angle of the front axle 
 
 ### PID Logic Ensures:
 
-- Reactions to errors (`Δx` or `Δd`) are **proportional** to their size
+- Reactions to errors (`Δx`) are **proportional** to their size
 - **No sudden jumps** – angle changes gradually depending on the **rate of change**
 - **Long-term deviations** are corrected smoothly, even if sensor data briefly fluctuates
 <img width="600" height="616" alt="image" src="https://github.com/user-attachments/assets/b2d9ebfe-193c-45cf-9ac2-bdeeccee2a55" />
