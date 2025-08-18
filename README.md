@@ -20,7 +20,7 @@ To build a reliable and fully autonomous robot capable of navigating real-world 
 
 **Team Members & Roles:**
 - **Marius** – Programmer and Mechanical Designer
-- **Domas** – Manager and Testing
+- **Domas** – Manager, Marketing and Testing
 - **Jonas** – Electronics Specialist and Design
   
 By combining our individual strengths, responsibilities, and teamwork, we were able to design, build, and refine a reliable autonomous car ready for competition. 
