@@ -3,7 +3,7 @@
 - 🧠 [Brainstorming](docs/brainstorming.md)  
 - 🗓️ [Planning](docs/planning.md)  
 - ⚙️ [Hardware](docs/hardware.md)  
-- 🛠️ [Mechanical Design](docs/mechanical.md)  
+- 🛠️ [Mechanical Design](docs/design.md)  
 - 💻 [Software / Code](docs/code.md)  
 - 🧪 [Testing](docs/testing.md)  
 - 📊 [Evaluation](docs/evaluation.md)  
