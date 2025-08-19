@@ -1,14 +1,12 @@
 # 🤖   - WRO 2025 Future Engineers: KU STEAM Pinkies
 ## 📚 Table of Contents
-- [Team Introduction](#team-introduction)
-- [Ideas and Principles](#ideas-and-principles)
-- [Robot Movement Control](#robot-movement-control)
-- [Power and Sensor Management](#power-and-sensor-management)
-- [Obstacle Avoidance](#obstacle-avoidance)
-- [Encountered Problems and Solutions](#encountered-problems-and-solutions)
-- [Robot Construction](#robot-construction)
-- [Robot Control Architecture](#robot-control-architecture)
-- [Electronics Wiring Diagram](#electronics-wiring-diagram)
+- 🧠 [Brainstorming](docs/brainstorming.md)  
+- 🗓️ [Planning](docs/planning.md)  
+- ⚙️ [Hardware](docs/hardware.md)  
+- 🛠️ [Mechanical Design](docs/mechanical.md)  
+- 💻 [Software / Code](docs/code.md)  
+- 🧪 [Testing](docs/testing.md)  
+- 📊 [Evaluation](docs/evaluation.md)  
 
 
 WRO Future Engineers documentation 
