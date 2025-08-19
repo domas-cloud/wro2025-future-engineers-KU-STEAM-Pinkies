@@ -1,5 +1,13 @@
 # Brainstorming & Idea Generation
 
+## Core Principles: 
+- Reliability over speed – better to be a bit slower, but always working 
+- Simplicity is key – avoid overly complex solutions 
+- Iterative improvement – enhance step by step 
+-	Testing over theory – everything is tested in practice 
+-	Mistakes = data – failure means learning something new
+
+---	
 ## 🧠 Initial Ideas
 
 1. **Multi-layer control architecture (SCA model)**
@@ -27,14 +35,7 @@
    - Use an algorithm library for optimization, e.g., decision logic or sensor data processing.  
 
 ---
-## Core Principles: 
-- Reliability over speed – better to be a bit slower, but always working 
-- Simplicity is key – avoid overly complex solutions 
-- Iterative improvement – enhance step by step 
--	Testing over theory – everything is tested in practice 
--	Mistakes = data – failure means learning something new
 
----	
 ## ⚖️ Comparison of Alternatives
 
 | Idea | Advantages | Disadvantages |
