@@ -11,7 +11,7 @@
 
 WRO Future Engineers documentation 
 Team Name: KU STEAM Pinkies
-Project Title:   
+Project   
 ## Team Introduction
 We are **KU STEAM Pinkies**, a passionate group of young engineers with a shared vision:  
 To build a reliable and fully autonomous robot capable of navigating real-world environments.
