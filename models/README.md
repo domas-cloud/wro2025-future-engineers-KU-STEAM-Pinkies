@@ -25,7 +25,8 @@ The steering system parts are also **3D-printed**.
 ---
 
 ## Frame
-The frame is made of **plywood** and consists of several levels with a compact removal system.  
+The frame is made of **plywood** and is **laser-cut**.  
+It consists of several levels with a compact removal system.  
 This allows the robot to be disassembled more easily — for example, if the movement system breaks, several plates can be removed at once without dismantling the entire robot.  
 
 The multi-level structure:
