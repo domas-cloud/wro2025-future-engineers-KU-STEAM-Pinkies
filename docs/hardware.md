@@ -4,7 +4,9 @@
 
 - **Arduino Mega 2560**  
   The main control microcontroller responsible for reading all sensors and controlling the motors.  
-  Chosen due to its larger memory and more I/O pins compared to the Arduino Uno.  
+  Chosen due to its larger memory and more I/O pins compared to the Arduino Uno.
+  - **Raspberry pi zero2**
+    To get info from camera
 
 - **Adafruit Motor Shield V2**  
   Used to control DC motors. Allows speed and direction regulation.  
@@ -23,8 +25,9 @@
   Connected to the Motor Shield through L293D drivers.  
 
 - **Li-ion batteries**  
-  Power the entire system.  
-
+  Power the entire system except raspberry pi.
+- **Power bank** 
+ Power the raspberry pi.
 ---
 
 ## 🔌 Wiring Diagram (described in words)
