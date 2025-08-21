@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="842" height="1191" viewBox="0 0 842 1191">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" d="M4234 1938H5451V4275H4234V1938"/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip_0)">
+<g inkscape:groupmode="layer" inkscape:label="0">
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M5317 4133 4661 3970"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M5317 2125 4660 2290"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M4401 3098 4539 2418"/>
+<path transform="matrix(.12,0,0,-.12,499.82,612.94)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M32.9097-162.19495C95.35989-149.52367 144.98831-102.1236 160.51316-40.32095"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M4538 3843 4401 3163"/>
+<path transform="matrix(.12,0,0,-.12,418.22,629.38)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M-32.9097-162.19495C-11.19118-166.60169 11.19118-166.60169 32.9097-162.19495"/>
+<path transform="matrix(.12,0,0,-.12,336.74003,612.94)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M-160.65898-39.7359C-145.3071-101.80613-95.57335-149.48036-32.9097-162.19495"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M5317 4133H4397"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M5317 2125H4397"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M4397 4133H4350"/>
+<path transform="matrix(0,-.12,-.12,-0,794,1177)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M4397 2125H4350V4133"/>
+</g>
+</g>
+</svg>
