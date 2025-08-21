@@ -22,7 +22,7 @@
   Responsible for driving the car forward and backward.  
   Connected to the Motor Shield through L293D drivers.  
 
-- **Li-ion batteries (7.4V)**  
+- **Li-ion batteries**  
   Power the entire system.  
 
 ---
