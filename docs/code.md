@@ -75,6 +75,9 @@ For this, we use a **three-layer architecture**:
 git clone --recurse-submodules https://github.com/domas-cloud/wro2025-future-engineers-KU-STEAM-Pinkies.git
 cd wro2025-future-engineers-KU-STEAM-Pinkies
 git submodule update --init --recursive
+
+---
+
 # 💻 Software – Build & Run
 
 ---
