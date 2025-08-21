@@ -24,6 +24,12 @@
   - Side-facing sensors → help keep the robot centered on the track.  
   Compared to ultrasonic sensors, TOF gives millimeter accuracy, faster response, and is less affected by surface angles.
 
+- **Color Sensor (TCS34725)**  
+  Detects surface colors and light intensity under the robot.  
+  In this project, it is specifically used to **detect and count orange and blue lines** on the track.  
+  The sensor provides RGB and clear light readings via I2C, which allows reliable differentiation of these colors even under varying lighting conditions.  
+  This functionality is important for lap counting, checkpoints, or special zone recognition.
+
 - **Servo motor (SG90)**  
   Controls the front steering mechanism.  
   Operates based on PWM signals from Arduino.  
