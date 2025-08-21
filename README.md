@@ -1,4 +1,26 @@
 # 🤖   - WRO 2025 Future Engineers: KU STEAM Pinkies
+
+## Project Overview
+Our project focuses on developing an **autonomous robot car** designed to compete in the WRO 2025 Future Engineers category.  
+The robot integrates:
+- **Arduino Mega 2560** for real-time sensor and actuator control  
+- **Raspberry Pi Zero 2** for camera processing and communication  
+- **TOF (VL53L1X) sensors** for obstacle detection and trajectory maintenance  
+- **Color sensor (TCS34725)** to detect and count **orange and blue track lines**  
+- **Servo-based steering** and **DC motor drivetrain with bearings** for smooth movement  
+
+This combination allows the robot to **detect obstacles, count checkpoints, and maintain its path** accurately under different conditions.
+
+## Repository Structure
+- `docs/` → detailed documentation (planning, testing, evaluation, etc.)  
+- `models/` → robot CAD models and assembly documentation  
+- `schemes/` → wiring diagrams and electronic schematics  
+- `src/` → source code (added as a git submodule)  
+- `t-photos/` → technical photos of the robot (close-ups)  
+- `v-photos/` → visual photos of the robot (full build)  
+- `video/` → project demonstration video  
+
+
 ## 📚 Table of Contents
 - 🧠 [Brainstorming](docs/brainstorming.md)  
 - 🗓️ [Planning](docs/planning.md)  
