@@ -38,7 +38,9 @@
 - The servo motor is connected to a PWM output on the Mega.  
 - TOF sensors are connected through the I2C bus (SDA, SCL).  
 - The battery powers both the Arduino and the Motor Shield.  
-
+- Camera connected to raspberry.
+- Rapberry connected to arduino to send info from camera
+- Power bank connected to rapberry to power it
 ---
 
 ## 🛠️ Component Selection Justification
