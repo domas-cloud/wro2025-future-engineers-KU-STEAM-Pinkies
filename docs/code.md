@@ -68,43 +68,40 @@ For this, we use a **three-layer architecture**:
 
 ---
 
-## ▶️ How to Run the Code
+# ▶️ How to Run the Code
 
 ### 1. Clone the Repository with Submodules
 ```bash
 git clone --recurse-submodules https://github.com/domas-cloud/wro2025-future-engineers-KU-STEAM-Pinkies.git
 cd wro2025-future-engineers-KU-STEAM-Pinkies
 git submodule update --init --recursive
+```
 
 ---
 
-# 💻 Software – Build & Run
-
----
-
-## 2. Open the `src/` Folder in PlatformIO
+### 2. Open the `src/` Folder in PlatformIO
 - Install [PlatformIO](https://platformio.org/) (VSCode extension or CLI).  
 - Target board: **Arduino Mega 2560**.  
 
 ---
 
-## 3. Build & Upload
+### 3. Build & Upload
 ```bash
 pio run
 pio run -t upload
-# 💻 Software – Run & Setup
+```
 
 ---
 
-## 4. Monitor Serial Output (optional)
+### 4. Monitor Serial Output (optional)
 ```bash
 pio device monitor
+```
 
 ---
 
-# 💻 Software – Hardware Setup & Summary
+# ⚙️ Hardware Setup
 
-## 5. Hardware Setup
 - **Arduino Mega** connected to **Adafruit Motor Shield V2** (I2C)  
 - **DC motor** → Motor Shield M1  
 - **Servo motor** → PWM pin (D9)  
@@ -142,5 +139,3 @@ Our program works as follows:
 
 This process mimics human driving: **look → decide → act**.  
 With PD control, the car drives smoothly, avoids obstacles, and counts checkpoints using color detection.
-
-
