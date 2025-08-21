@@ -5,7 +5,8 @@
 - **Arduino Mega 2560**  
   The main control microcontroller responsible for reading all sensors and controlling the motors.  
   Chosen due to its larger memory and more I/O pins compared to the Arduino Uno.
-  - **Raspberry pi zero2**
+  
+- **Raspberry pi zero2**
     To get info from camera
 
 - **Adafruit Motor Shield V2**  
