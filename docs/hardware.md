@@ -1,88 +1,87 @@
-# Hardware
+# ⚙️ Hardware Documentation
 
-## ⚙️ Used Components
+## 🧩 Used Components
 
 - **Arduino Mega 2560**  
-  The main control microcontroller responsible for reading all sensors and controlling the motors.  
-  Chosen due to its larger memory and more I/O pins compared to the Arduino Uno.  
-  It handles sensor fusion, decision-making (e.g., obstacle avoidance), and communicates with the Raspberry Pi for vision data.
+  Main control microcontroller responsible for reading all sensors and controlling the motors.  
+  - Large memory and many I/O pins compared to Arduino Uno  
+  - Handles sensor fusion, obstacle avoidance, and communicates with Raspberry Pi  
 
 - **Raspberry Pi Zero 2**  
-  Used to process information from the camera, such as line or object detection.  
-  Sends simplified results (like coordinates or detection flags) to the Arduino Mega over serial communication.  
-  Offloads heavy image processing tasks that the Arduino cannot handle.
+  - Processes camera data (line / object detection)  
+  - Sends simplified results to Arduino over serial (115200 baud)  
+  - Offloads heavy tasks (image recognition) from Arduino  
 
 - **Adafruit Motor Shield V2**  
-  Dedicated motor driver shield that controls DC motors.  
-  Connected via I2C, which leaves most of the Arduino pins free for sensors.  
-  Provides stable current delivery, direction switching (H-bridge), and PWM speed regulation.
+  - Motor driver shield, controls DC motor via I2C  
+  - Provides PWM speed regulation, H-bridge for direction control  
+  - Leaves most Arduino pins free  
 
-- **TOF (VL53L1X) sensors**  
-  High-precision time-of-flight distance sensors.  
-  Used for multiple tasks:  
-  - Front-facing sensor → detects obstacles and prevents collisions.  
-  - Side-facing sensors → help keep the robot centered on the track.  
-  Compared to ultrasonic sensors, TOF gives millimeter accuracy, faster response, and is less affected by surface angles.
+- **TOF Sensors (VL53L1X)**  
+  - Millimeter-accurate time-of-flight sensors  
+  - **Front sensor** → obstacle detection  
+  - **Side sensors** → track centering  
+  - More precise and reliable than ultrasonic sensors  
 
 - **Color Sensor (TCS34725)**  
-  Detects surface colors and light intensity under the robot.  
-  In this project, it is specifically used to **detect and count orange and blue lines** on the track.  
-  The sensor provides RGB and clear light readings via I2C, which allows reliable differentiation of these colors even under varying lighting conditions.  
-  This functionality is important for lap counting, checkpoints, or special zone recognition.
+  - Reads RGB + clear light via I2C  
+  - Used to **detect and count orange & blue lines** on the track  
+  - Essential for lap counting and checkpoints  
 
-- **Servo motor (SG90)**  
-  Controls the front steering mechanism.  
-  Operates based on PWM signals from Arduino.  
-  Its range is software-limited to prevent mechanical stress on the steering rack and to ensure consistent accuracy.  
+- **Servo Motor (SG90)**  
+  - Controls front steering mechanism  
+  - PWM control from Arduino  
+  - Software-limited range to prevent oversteering  
 
-- **DC motor**  
-  Provides forward and backward motion for the robot.  
-  Controlled via the Motor Shield with PWM for speed regulation.  
-  Coupled with a gear reduction system that increases torque and reduces excessive RPM, making motion smoother and controllable.  
-  Bearings are used in the drivetrain to minimize friction and improve efficiency.
+- **DC Motor**  
+  - Drives the robot forward/backward  
+  - Controlled through Motor Shield with PWM  
+  - Gear reduction for torque & smoother motion  
+  - Bearings used in drivetrain for efficiency  
 
-- **Li-ion batteries**  
-  Supply power to the Arduino Mega, Motor Shield, motors, and sensors.  
-  Offer high energy density and rechargeability, making them suitable for long operation.  
-  Voltage is regulated to ensure safe levels for the electronics.
+- **Li-ion Batteries**  
+  - Power Arduino, Motor Shield, motors, and sensors  
+  - High energy density & rechargeability  
 
-- **Power bank**  
-  Powers the Raspberry Pi Zero 2 independently from the Li-ion battery pack.  
-  This prevents voltage drops from the motors from affecting the Pi’s operation.  
-  Ensures stable 5V delivery needed for continuous camera and image processing tasks.  
+- **Power Bank**  
+  - Dedicated 5V supply for Raspberry Pi  
+  - Isolates Pi from motor power spikes  
 
 ---
 
-## 🔌 Wiring Diagram (described in words)
+## 🔌 Wiring Diagram (textual)
 
-- **Arduino Mega ↔ Motor Shield V2**: connected via I2C.  
-- **DC motor**: connected to Motor Shield output M1.  
-- **Servo motor**: connected to Arduino PWM pin (e.g., D9).  
-- **TOF sensors**: connected to Arduino via the I2C bus (SDA, SCL). Each sensor uses a different I2C address.  
-- **Battery pack**: powers the Arduino Mega and Motor Shield (motors + logic).  
-- **Raspberry Pi camera**: connected directly to the Pi camera port.  
-- **Raspberry Pi ↔ Arduino**: serial connection for data exchange (camera → Arduino).  
-- **Power bank → Raspberry Pi**: provides stable 5V power for the Pi.
+- **Arduino Mega ↔ Motor Shield V2**: I2C bus  
+- **DC Motor** → Motor Shield **M1**  
+- **Servo Motor** → Arduino **D9 (PWM)**  
+- **TOF Sensors (VL53L1X)** → I2C (SDA, SCL), each with unique I2C address  
+- **Color Sensor (TCS34725)** → I2C (same bus)  
+- **Li-ion Battery Pack** → Arduino Mega + Motor Shield  
+- **Raspberry Pi Zero 2** ↔ Arduino Mega → Serial (TX/RX, 115200 baud)  
+- **Raspberry Pi Camera** → Pi camera port  
+- **Power Bank → Raspberry Pi** (stable 5V supply)  
 
 ---
 
 ## 🛠️ Component Selection Justification
 
-- **Arduino Mega**: necessary for handling many simultaneous peripherals (multiple TOF sensors, servo, motor control).  
-- **Raspberry Pi Zero 2**: lightweight but powerful enough for computer vision tasks; keeps main logic separate from image recognition.  
-- **Motor Shield V2**: reliable I2C-based solution with built-in H-bridges and PWM support.  
-- **TOF sensors**: provide far more accurate distance measurements than ultrasonic, crucial for precise navigation.  
-- **Servo motor**: precise and responsive steering, avoids drift seen in continuous DC-based steering systems.  
-- **DC motor with gear reduction**: balances speed and torque for stable driving.  
-- **Li-ion batteries + power bank separation**: ensures that motor-induced voltage drops do not affect the Pi’s sensitive processing.  
+- **Arduino Mega** → many peripherals at once, strong I/O support  
+- **Raspberry Pi Zero 2** → dedicated vision processor, avoids overloading Arduino  
+- **Motor Shield V2** → reliable I2C control, PWM, H-bridges included  
+- **TOF sensors** → accurate, fast, unaffected by surface angles (better than ultrasonic)  
+- **Servo motor** → accurate steering vs DC continuous motors  
+- **DC motor w/ gear reduction** → torque + smooth control  
+- **Li-ion + Power bank separation** → isolates Pi from noisy motor voltage  
 
 ---
 
 ## 📦 Hardware Expansion Possibilities
 
-- Add **IMU (accelerometer + gyroscope)** for tilt, orientation, and better trajectory control.  
-- Integrate **wheel encoders** to track distance traveled and enable closed-loop speed control.  
-- Add **current sensors** to monitor motor load and detect stalls or obstacles.  
-- Implement **battery monitoring** to warn or stop operation at low voltage.  
-- Upgrade to a **Raspberry Pi 4** for advanced real-time vision tasks (object detection, SLAM).  
-- Add **wireless communication (Wi-Fi / Bluetooth)** for remote control and debugging.  
+- Add **IMU (accelerometer + gyroscope)** → tilt/orientation feedback  
+- Add **wheel encoders** → closed-loop speed & distance tracking  
+- Add **current sensors** → detect stalls / overload  
+- Add **battery monitoring** → prevent low-voltage damage  
+- Upgrade to **Raspberry Pi 4** → enable advanced vision (object detection, SLAM)  
+- Add **Wi-Fi / Bluetooth** → for remote debugging & telemetry  
+
+---
