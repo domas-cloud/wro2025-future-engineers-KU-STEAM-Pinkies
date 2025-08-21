@@ -7,7 +7,7 @@ The robot consists of three engineering parts: **the movement system**, **the st
 ## Movement System
 The movement system is made of a gear mechanism that **increases torque** and **reduces speed**.  
 This is necessary because the motor operates at a very high speed.  
-All gear connections are lubricated with oil to reduce friction and wear.  
+All gear connections are lubricated with oil to reduce friction and wear, and **bearings are used to ensure smoother rotation and durability**.  
 The movement system parts are **3D-printed**.
 
 ---
