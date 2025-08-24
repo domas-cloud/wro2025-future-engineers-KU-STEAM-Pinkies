@@ -1,3 +1,4 @@
 [submodule "src"]
-	path = src_backup
+	path = src
 	url = https://github.com/mapdevelopment/pinkies.git
+	branch = main
