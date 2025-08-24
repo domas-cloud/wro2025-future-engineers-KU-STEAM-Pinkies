@@ -1,4 +1,4 @@
 [submodule "src"]
-	path = src
-	url = https://github.com/mapdevelopment/pinkies.git
-	branch = main
+    path = src
+    url = https://github.com/mapdevelopment/pinkies.git
+    branch = main
