@@ -1,0 +1,40 @@
+name: Update src submodule
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # kas valandą; gali keisti pvz. kas dieną: "0 6 * * *"
+  workflow_dispatch:       # leidžia paleisti ranka
+
+permissions:
+  contents: write
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Ensure submodule tracks main
+        run: |
+          git submodule set-branch -b main src || true
+          cat .gitmodules
+
+      - name: Update submodule to latest main
+        run: |
+          git submodule update --init --remote src
+          git status
+
+      - name: Commit & push if changed
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .gitmodules src
+            git commit -m "chore: bump src submodule to latest main"
+            git push
+          else
+            echo "No submodule updates."
+          fi
