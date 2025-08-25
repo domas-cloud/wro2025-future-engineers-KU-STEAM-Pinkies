@@ -124,8 +124,8 @@ Where **d₂** is the desired (setpoint) distance from the wall.
 
 ## 1. Object Detection with Camera
 The robot uses a camera to detect colored objects.  
-First, the system isolates the object of interest from the camera feed using a predefined color filter (HSV or RGB range).  
-The detected object represents a potential obstacle (e.g., a block).
+First, the system isolates the object of interest from the camera feed using a predefined color filter.  
+The detected object represents a potential obstacle.
 
 ## 2. Distance Calculation
 Once the object is detected, the system calculates its distance from the robot or from a reference wall.  
@@ -142,9 +142,9 @@ The system evaluates whether the detected object is located on the left or right
 
 This decision defines the avoidance direction.
 
-## 5. PID Control for Path Adjustment
+## 5. PD Control for Path Adjustment
 Based on the obstacle position, the robot generates a corrected trajectory line that must be followed.  
-A PID controller is then used to smoothly adjust the robot’s movement, ensuring it bypasses the obstacle while maintaining stable navigation.
+A PD controller is then used to smoothly adjust the robot’s movement, ensuring it bypasses the obstacle while maintaining stable navigation.
 
 ---
 
