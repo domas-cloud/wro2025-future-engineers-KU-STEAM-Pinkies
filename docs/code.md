@@ -120,6 +120,41 @@ The error used by the PD/PID controller is:
 Where **d₂** is the desired (setpoint) distance from the wall.
 
 
+# Obstacle Avoidance Algorithm
+
+## 1. Object Detection with Camera
+The robot uses a camera to detect colored objects.  
+First, the system isolates the object of interest from the camera feed using a predefined color filter (HSV or RGB range).  
+The detected object represents a potential obstacle (e.g., a block).
+
+## 2. Distance Calculation
+Once the object is detected, the system calculates its distance from the robot or from a reference wall.  
+The distance is estimated based on the camera’s field of view, the object’s size in the image, and the robot’s current position.
+
+## 3. Object Position Estimation
+Using the processed camera data, the robot determines the object’s coordinates relative to its own position (x, y).  
+This allows the robot to understand the exact location of the obstacle within its coordinate system.
+
+## 4. Side Determination (Left/Right)
+The system evaluates whether the detected object is located on the left or right side of the robot’s field of view.  
+- If the object is on the left → the obstacle is considered left-side.  
+- If the object is on the right → the obstacle is considered right-side.  
+
+This decision defines the avoidance direction.
+
+## 5. PID Control for Path Adjustment
+Based on the obstacle position, the robot generates a corrected trajectory line that must be followed.  
+A PID controller is then used to smoothly adjust the robot’s movement, ensuring it bypasses the obstacle while maintaining stable navigation.
+
+---
+
+### Summary
+- **Camera** detects the colored obstacle.  
+- **Distance & position** are calculated relative to the robot.  
+- **Left/Right** determination defines avoidance direction.  
+- **PID controller** follows an adjusted line to safely avoid the obstacle.
+
+
 ## 💬 Additional Logic
 - **Safety stop** if all sensors give invalid values.  
 - **Servo angle limits** to avoid gear skipping.  
