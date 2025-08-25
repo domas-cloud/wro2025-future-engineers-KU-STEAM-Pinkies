@@ -34,7 +34,32 @@ For this, we use a **three-layer architecture**:
   - **Derivative part (D)** → how quickly that deviation is changing.  
 - The car not only sees *how much* it deviates, but also *how fast* it happens.  
 - This prevents oscillation from side to side.
-- # 📏 How Distance to the Wall (d₁) is Calculated
+
+---
+
+### 4. Steering Servo Control
+- The PD output is converted into a **steering angle**.  
+- Large error → strong steering correction.  
+- Small error → slight correction.  
+- Steering values are limited in software so the servo does not exceed its physical range.  
+
+---
+
+### 5. Motor Update
+- The **DC motor** is controlled through the Adafruit Motor Shield.  
+- If sensors show a clear path → base speed is maintained.  
+- If an obstacle is detected → the motor slows down or stops.  
+- At each cycle, the robot decides whether to **keep driving**, **slow down**, or **stop**.  
+
+---
+
+### 6. Obstacle Detection Logic
+- If the **front TOF sensor** shows a distance smaller than safe, the robot stops.  
+- If the obstacle is only on one side, the car adjusts steering to go around it.  
+- If all sensors fail → the robot stops in **safety mode**.  
+
+---
+# 📏 How Distance to the Wall (d₁) is Calculated
 
 
 
@@ -94,31 +119,6 @@ The error used by the PD/PID controller is:
 
 Where **d₂** is the desired (setpoint) distance from the wall.
 
-
----
-
-### 4. Steering Servo Control
-- The PD output is converted into a **steering angle**.  
-- Large error → strong steering correction.  
-- Small error → slight correction.  
-- Steering values are limited in software so the servo does not exceed its physical range.  
-
----
-
-### 5. Motor Update
-- The **DC motor** is controlled through the Adafruit Motor Shield.  
-- If sensors show a clear path → base speed is maintained.  
-- If an obstacle is detected → the motor slows down or stops.  
-- At each cycle, the robot decides whether to **keep driving**, **slow down**, or **stop**.  
-
----
-
-### 6. Obstacle Detection Logic
-- If the **front TOF sensor** shows a distance smaller than safe, the robot stops.  
-- If the obstacle is only on one side, the car adjusts steering to go around it.  
-- If all sensors fail → the robot stops in **safety mode**.  
-
----
 
 ## 💬 Additional Logic
 - **Safety stop** if all sensors give invalid values.  
