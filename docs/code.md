@@ -33,7 +33,67 @@ For this, we use a **three-layer architecture**:
   - **Proportional part (P)** → how much the car has deviated.  
   - **Derivative part (D)** → how quickly that deviation is changing.  
 - The car not only sees *how much* it deviates, but also *how fast* it happens.  
-- This prevents oscillation from side to side.  
+- This prevents oscillation from side to side.
+- # 📏 How Distance to the Wall (d₁) is Calculated
+
+
+
+The value **d₁** represents the **true perpendicular distance** from the robot’s side to the wall.  
+It is calculated using **two TOF sensors** (front and rear) mounted on the same side of the robot.
+
+---
+## 🔹 Geometric Calculation of d₁
+
+To obtain the true perpendicular distance to the wall, the robot uses two TOF sensors (front and rear).  
+The diagram below shows how x₁ and x₂ are projected to calculate d₁:
+
+<img width="632" height="648" alt="image" src="https://github.com/user-attachments/assets/6dedc208-3fd4-406c-ae73-772a011d1af5" />
+
+
+Here:
+- x₁ = front TOF measurement  
+- x₂ = rear TOF measurement  
+- L = distance between sensors  
+- d₁ = perpendicular distance to the wall  
+- d₂ = desired setpoint distance  
+
+The angle φ is used to project the sensor readings, so the real distance is:  
+
+d₁ ≈ ((x₁ + x₂) / 2) * cos(φ)   
+
+---
+## 🔹 Step 1 – Sensor Readings
+- **x₁** = front TOF measurement (mm)  
+- **x₂** = rear TOF measurement (mm)  
+- **L** = longitudinal distance between the two sensors (mm)
+
+---
+
+## 🔹 Step 2 – Angle to the Wall
+The tilt angle θ of the robot relative to the wall is computed as:
+
+θ = arctan((x₂ - x₁) / L)
+
+- If **x₁ < x₂** → the robot’s nose points **towards** the wall  
+- If **x₁ > x₂** → the robot’s nose points **away** from the wall  
+
+---
+
+## 🔹 Step 3 – Perpendicular Distance
+Since the sensors measure along their own axis (not perpendicular to the wall),  
+the perpendicular distance is calculated as:
+
+d₁ ≈ ((x₁ + x₂) / 2) * cos(θ)
+
+---
+
+## 🔹 Step 4 – Distance Error
+The error used by the PD/PID controller is:
+
+Δd = d₁ - d₂
+
+Where **d₂** is the desired (setpoint) distance from the wall.
+
 
 ---
 
