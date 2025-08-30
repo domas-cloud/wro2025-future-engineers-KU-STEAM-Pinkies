@@ -119,6 +119,35 @@ The error used by the PD/PID controller is:
 
 Where **d₂** is the desired (setpoint) distance from the wall.
 
+### Sensor Reading  
+- In the fallback configuration, it also reads the IMU yaw.  
+
+---
+
+### Error Calculation  
+- With IMU: yaw error is added to side distance error to stabilize turns.  
+
+---
+
+### PD Control Algorithm  
+- With IMU: yaw correction is combined with side distance correction.  
+
+---
+
+# 🧭 Sensor Fusion (ToF + IMU Fallback)  
+
+When only 3 ToFs are available:  
+- Two side ToFs are used for distance alignment.  
+- IMU provides yaw for orientation stability.  
+
+This ensures stable turning even with fewer distance sensors.  
+The PD control loop remains the same, only the sensor inputs are different.  
+
+---
+
+### 📚 Required Libraries  
+- Adafruit Sensor (for IMU, e.g., MPU6050/MPU9250 library)  
+
 
 # Obstacle Avoidance Algorithm
 
