@@ -31,7 +31,7 @@ Our development process is fully documented:
 - 💻 [Software / Code](docs/code.md)  
 - 🧪 [Testing](docs/testing.md)  
 - 📊 [Evaluation](docs/evaluation.md)  
-- ❗ [Encountered Problems and Solutions](Encountered_Problems_and_Solutions.md)  
+- ❗ [Encountered Problems and Solutions](docs/Encountered_Problems_and_Solutions.md)  
 ---
 
 ## ⚙️ Hardware Overview
