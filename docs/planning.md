@@ -1,4 +1,4 @@
-# Planning
+# 🗓️ Planning
 
 ## 📅 Project Timeline
 
@@ -12,6 +12,7 @@
 | 6. Testing and iterations | Perform tests, collect data, improve system | Domas |
 | 7. Final evaluation | Verify against goals and WRO rules | Whole team |
 | 8. Documentation | Complete engineering journal, GitHub documentation | Domas |
+| 9. Emergency adaptations | React to unexpected hardware failures (e.g. fallback to IMU) | Whole team |
 
 ---
 
@@ -20,35 +21,46 @@
 ### Hardware
 - Arduino Mega 2560  
 - Adafruit Motor Shield V2  
-- TOF (VL53L1X) sensors  
+- TOF (VL53L1X) sensors (originally 5 planned, fallback with 3)  
+- IMU (gyro + accelerometer) – integrated after ToF failures  
 - Servo motor for steering  
 - DC motor  
-- Li-ion battery  
+- Li-ion battery pack  
 
 ### Software & Tools
 - Arduino IDE / PlatformIO  
 - GitHub for version control and documentation  
-- CAD software  
+- CAD software for mechanical and wiring diagrams  
+- Logging/plotting tools for test data analysis  
 
 ---
 
 ## 👥 Team Task Distribution
 
 - **Marius – Programmer and Mechanical Designer**  
-  Responsible for coding, PD control implementation, CAD model creation.  
+  Coding, PD control implementation, CAD design, IMU integration.  
 
 - **Domas – Manager, Marketing and Testing**  
-  Responsible for project coordination, testing, documentation, and external communication.  
+  Project coordination, testing (including emergency fallback testing), documentation, communication.  
 
 - **Jonas – Electronics Specialist and Designer**  
-  Responsible for electronics assembly, sensor integration, wiring diagrams, and design solutions.  
+  Electronics assembly, ToF wiring, IMU addition, sensor calibration, power management solutions.  
 
 ---
 
 ## 🎯 Milestones
 
 - **M1** – Problem clearly defined and documented  
-- **M2** – First prototypes tested  
+- **M2** – First prototypes tested (5× ToF configuration)  
 - **M3** – Stable driving system with obstacle detection  
-- **M4** – Final tests completed  
-- **M5** – Full documentation submitted  
+- **M4** – *Emergency adaptation:* 3× ToF + IMU configuration validated before competition  
+- **M5** – Final tests completed  
+- **M6** – Full documentation submitted  
+
+---
+
+## ⚠️ Risk Management 
+
+- Always prepare **spare sensors/components**.  
+- Define a **fallback plan** (e.g. replace missing ToFs with IMU input).  
+- Allocate time for **unexpected hardware failures** close to competition.  
