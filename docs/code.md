@@ -146,7 +146,7 @@ The PD control loop remains the same, only the sensor inputs are different.
 ---
 
 ### 📚 Required Libraries  
-- Adafruit Sensor (for IMU, e.g., MPU6050/MPU9250 library)  
+- Adafruit Sensor (for IMU)  
 
 
 # Obstacle Avoidance Algorithm
