@@ -1,4 +1,4 @@
-# Testing
+# 🧪 Testing
 
 ## 🎯 Testing Goals
 - Evaluate the car's stability when driving on straight sections and in turns.  
@@ -56,6 +56,27 @@
 - Additional PD tuning required in corners.  
 - Front obstacles detected reliably, stopping distance ~8 cm.  
 - Obstacle avoidance logic still under testing.  
+
+---
+
+## 🧭 IMU + ToF Fallback Testing
+
+When two ToF sensors failed shortly before the competition, the system was adapted to use **3 ToFs + IMU**.  
+Additional tests were carried out to ensure stability:  
+
+- **Sharp Turn Test with IMU**  
+  - Goal: verify if IMU yaw helps smoother turning.  
+  - Result: robot showed reduced oscillation compared to ToF-only setup.  
+
+- **Stability Under Reduced Sensors**  
+  - Goal: confirm that the PD algorithm still works with fewer distance sensors.  
+  - Result: stable driving achieved, algorithm unchanged, only inputs adapted.  
+
+- **Competition Simulation Run**  
+  - Goal: full track drive with fallback configuration.  
+  - Result: reliable driving, checkpoints detected, obstacle stop worked as expected.  
+
+**Lesson learned:** IMU significantly improves stability when ToF coverage is reduced, and having a fallback plan was crucial for competition readiness.  
 
 ---
 
