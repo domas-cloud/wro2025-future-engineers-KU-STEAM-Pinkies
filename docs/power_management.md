@@ -10,7 +10,7 @@
 
 - **Steering servo:**  
   Powered from Arduino 5 V rail.  
-  Control via PWM signal from Arduino Mega pin (D9).
+  Control via PWM signal from Arduino Mega pin (D8).
 
 - **Sensors:**  
   ToF VL53L1X (3–5 units) and IMU MPU-6050 connected via Arduino I²C.
