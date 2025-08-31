@@ -24,14 +24,16 @@ To design and build a reliable autonomous robot that can perceive its environmen
 
 Our development process is fully documented:
 
-- 🧠 [Brainstorming](docs/brainstorming.md)  
-- 🗓️ [Planning](docs/planning.md)  
-- ⚙️ [Hardware](docs/hardware.md)  
-- 🛠️ [Mechanical Design](docs/design.md)  
-- 💻 [Software / Code](docs/code.md)  
-- 🧪 [Testing](docs/testing.md)  
-- 📊 [Evaluation](docs/evaluation.md)  
-- ❗ [Encountered Problems and Solutions](docs/Encountered_Problems_and_Solutions.md)  
+- 🧠 [Brainstorming](docs/brainstorming.md)
+- 📝 [Planning](docs/planning.md)
+- ⚙️ [Hardware](docs/hardware.md)
+- 🛠️ [Mechanical Design](docs/design.md)
+- ⚡ [Power & Sense Management](docs/power_management.md)
+- 💻 [Software / Code](docs/code.md)
+- 🧪 [Testing](docs/testing.md)
+- 📊 [Evaluation](docs/evaluation.md)
+- ❗ [Encountered Problems and Solutions](docs/Encountered_Problems_and_Solutions.md)
+ 
 ---
 
 ## ⚙️ Hardware Overview
